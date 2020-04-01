@@ -12,8 +12,8 @@ async function run() {
     const keyStorePassword = core.getInput('keyStorePassword');
     const keyPassword = core.getInput('keyPassword');
 
-    console.log(`Preparing to sign key @ ${releaseDir} with signing key`);
-
+    console.log(`Preparing to sign key @ ${releaseDir} with signing key, we are currently in this dir: ${__dirname}`);
+    
     // 1. Find release file
     const releaseFile = io.findReleaseFile(releaseDir);
     if (releaseFile !== undefined) {
